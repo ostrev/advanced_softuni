@@ -1,9 +1,10 @@
-numbs = tuple(float(el) for el in input().split())
-dic = {}
+numbers = [float(x) for x in input().split()]
+dict_numbers = {}
+for num in numbers:
+    if num not in dict_numbers:
+        float_num = float(num)
+        dict_numbers[num] = 0
+    dict_numbers[num] += 1
 
-for num in numbs:
-    if num not in dic:
-        dic[num] = 0
-    dic[num] += 1
-for key, value in dic.items():
-    print(f'{key} - {value} times')
+for k, v in dict_numbers.items():
+    print(f'{k:.1f} - {v} times')
