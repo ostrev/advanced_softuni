@@ -1,14 +1,13 @@
 number_of_students = int(input())
-dic = {}
-
+students = {}
 for _ in range(number_of_students):
-    student, grade = tuple(input().split())
-    grade = float(grade)
-    if student not in dic:
-        dic[student] = []
-    dic[student].append(grade)
+    data = input().split()
+    name = data[0]
+    grade = float(data[1])
 
-for key, value in dic.items():
-    print(f'{key} -> {" ".join([f"{s:.2f}" for s in value])} (avg: {sum(value)/len(value):.2f})')
+    if name not in students:
+        students[name] = []
+    students[name].append(grade)
 
-
+for student, grades in students.items():
+    print(f"{student} -> {' '.join([f'{s:.2f}' for s in grades])} (avg: {sum(grades)/len(grades):.2f})")
