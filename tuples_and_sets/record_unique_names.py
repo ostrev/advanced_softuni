@@ -1,7 +1,8 @@
-num_name = int(input())
-names = set()
-for _ in range(num_name):
+number_of_names = int(input())
+list_names = []
+for _ in range(number_of_names):
+    list_names.append(input())
 
-    names.add(input())
-for person in names:
-    print(person)
+set_names = set(list_names)
+
+print(*set_names, sep='\n')
