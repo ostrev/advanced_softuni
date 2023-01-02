@@ -1,17 +1,18 @@
 number_of_guests = int(input())
-guest_list = set()
-for _ in range(number_of_guests):
-    line = input()
-    guest_list.add(line)
 
+vip = set()
+
+for _ in range(number_of_guests):
+    code = input()
+    vip.add(code)
 
 command = input()
 while command != 'END':
-    guest_list.discard(command)
+    vip.remove(command)
     command = input()
 
 
-print(len(guest_list))
-sorted_guest = sorted(guest_list)
-for guest in sorted_guest:
-    print(guest)
+vip_sorted = sorted(vip)
+
+print(len(vip))
+print(*vip_sorted, sep='\n')
