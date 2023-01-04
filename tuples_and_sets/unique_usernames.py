@@ -1,8 +1,8 @@
-num = int(input())
+number_of_user = int(input())
 
-students = set()
-for _ in range(num):
-    line = input()
-    students.add(line)
+usernames = set()
+for _ in range(number_of_user):
+    user = input()
+    usernames.add(user)
 
-print('\n'. join(students))
+print(*usernames, sep='\n')
