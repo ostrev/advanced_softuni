@@ -1,16 +1,15 @@
 numbers = input().split()
-n_num = int(numbers[0])
-m_num = int(numbers[1])
-first_set = set()
-second_set = set()
+n = int(numbers[0])
+m = int(numbers[1])
 
-for _ in range(n_num):
-    line = int(input())
-    first_set.add(line)
-for _ in range(m_num):
-    line_m = int(input())
-    second_set.add(line_m)
+n_set = set()
+m_set = set()
 
-new_set = first_set.intersection(second_set)
+for _ in range(n):
+    n_set.add(input())
 
-print(*new_set, sep='\n')
+for _ in range(m):
+    m_set.add(input())
+
+result = n_set.intersection(m_set)
+print(*result, sep='\n')
