@@ -1,9 +1,7 @@
-count = int(input())
+numbers = int(input())
+elements = set()
+for _ in range(numbers):
+    data = input().split()
+    elements.update(data)
 
-elements_set = set()
-for _ in range(count):
-    line = input().split()
-    for el in line:
-        elements_set.add(el)
-
-print(*elements_set, sep='\n')
+print(*elements, sep='\n')
