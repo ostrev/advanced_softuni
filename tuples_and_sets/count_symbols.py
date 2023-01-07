@@ -1,11 +1,11 @@
-line = input()
-dic = {}
-for char in line:
-    if char not in dic:
-        dic[char] = 1
-    else:
-        dic[char] += 1
+text = input()
+characters = {}
 
-for kvp in sorted(dic.items()):
+for char in text:
+    if char not in characters:
+        characters[char] = 0
+    characters[char] += 1
 
-    print(f'{kvp[0]}: {kvp[1]} time/s')
+sorted_char = sorted(characters.items(), key=lambda x: x)
+for char, times in sorted_char:
+    print(f'{char}: {times} time/s')
